@@ -25,7 +25,7 @@ var avgPrice = Math.round((total / etsyItems.length) * 100) / 100;
 
 console.log('The average price is ' + avgPrice );
 
-console.log("****** Next Answer ********");
+console.log("****** Question 2 Answer ********");
 
 // QUESTION TWO
 // Show me how to get an array of items that cost between $14.00 and $18.00 USD
@@ -61,7 +61,7 @@ print("]");
 
 
 
-console.log("****** Next Answer ********");
+console.log("****** Question 3 Answer ********");
 
 // QUESTION THREE
 // Show me how find the item with a "GBP" curreny code and print its name and price. Please console.log the one you find.
@@ -81,7 +81,7 @@ itemPound.forEach(function(item) {
   print(item.title + " costs " + "£" + item.price  );
 });
 
-console.log("****** Next Answer ********");
+console.log("****** Question 4 Answer ********");
 
 
 // QUESTION FOUR
@@ -98,7 +98,7 @@ console.log("****** Next Answer ********");
 
 
 
-var woodObjects
+var woodObjects;
 
 var etsyObjects = etsyItems.map(function(item) {
   return item;
@@ -115,7 +115,7 @@ findWood.map(function(item) {
 });
 
 
-console.log("****** Next Answer ********");
+console.log("****** Question 5 Answer ********");
 
 
  // Use this: if items.materials.indexOf('wood') != -1;
@@ -152,7 +152,52 @@ console.log("****** Next Answer ********");
 // the three broomsticks glass
 // personalized harry potter glass
 
+var noMaterials;
+var etsyObjects = etsyItems.map(function(item) {
+  return item;
+});
+
+var eightMaterials = etsyObjects.forEach(function(item) {
+
+  if ( item.materials.length >= 8 ) {
+    print("\n \n " + item.title + " has " + item.materials.length + " materials: \n" );
+    item.materials.forEach(function(item2){
+      print(item2);
+    });
+
+  } else {
+    return;
+  }
+
+});
+
+
+
+// eightMaterials.forEach(function(item) {
+//   numMaterials = item.materials.length;
+//
+// });
+//
+// eightMaterials.map(function(item) {
+//   print(eightMaterials.title + " has " +  );
+// });
+
+
+console.log("****** Question 6 Answer ********");
+
+
 
 // QUESTION 6
 // Show me how to calculate how many items were made by their sellers
 // The output should be "18 were made by their sellers"
+
+//  who_made: "I_did"
+var numSellerMade =0;
+etsyItems.forEach(function(item) {
+    if( (item.who_made).toLowerCase() == 'i_did') {
+      numSellerMade += 1;
+    }
+
+});
+
+print(numSellerMade + " were made by their sellers");
